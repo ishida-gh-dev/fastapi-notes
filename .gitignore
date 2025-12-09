@@ -2,19 +2,21 @@
 __pycache__/
 *.py[cod]
 *.pyo
+*.pyd
 
 # Virtual environment
 venv/
 env/
 .venv/
 
-# IDE/Editor
+# IDE / エディタ関連
 .vscode/
 .idea/
 
-# OS files
+# OS 関連
 .DS_Store
+Thumbs.db
 
-# Local DB or runtime data
+# ローカルDB / データファイル
 *.db
 *.sqlite

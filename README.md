@@ -1,43 +1,65 @@
 # FastAPI Notes API
 
-A simple Notes API built with **FastAPI**, created as part of a technical portfolio submission.
+**📖 概要**  
+FastAPI と Python で構築した、メモ管理用のシンプル CRUD API。  
+個人の学習およびポートフォリオ提出用に作成。
 
-## 📌 Features
+---
 
--   Create, read, update, delete notes (CRUD)
--   FastAPI with auto-generated Swagger UI
--   Simple in-memory data store (for demonstration)
--   Fully typed Python code
+## ✅ 機能一覧（Features）
 
-## 🛠 Tech Stack
+| メソッド | エンドポイント | 動作概要     |
+| -------- | -------------- | ------------ |
+| GET      | `/notes`       | メモ一覧取得 |
+| POST     | `/notes`       | メモ作成     |
+| GET      | `/notes/{id}`  | 特定メモ取得 |
+| PUT      | `/notes/{id}`  | メモ更新     |
+| DELETE   | `/notes/{id}`  | メモ削除     |
 
--   Python 3.11
--   FastAPI
--   Uvicorn
--   Pydantic
+Swagger UI によるドキュメント生成対応。  
+→ 起動後 `http://localhost:8000/docs` で確認可能。
 
-## 🚀 How to run (local)
+---
+
+## 🛠 技術スタック (Tech Stack)
+
+-   Python 3.x
+-   :contentReference[oaicite:0]{index=0}
+-   :contentReference[oaicite:1]{index=1}
+-   データストア: メモリ上のリストによる簡易実装
+-   （今後の拡張例：SQLite／Docker／認証機能など）
+
+---
+
+## 🚀 ローカルでの動作方法
 
 ```bash
+git clone https://github.com/ishida-gh-dev/fastapi-notes.git
+cd fastapi-notes
+python -m venv venv
+.\venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
--   Access Swagger UI:
-    http://localhost:8000/docs
+-   ブラウザで以下へアクセス → Swagger UI が立ち上がる
+    -   http://localhost:8000/docs
 
-## 📄 Endpoints
+## 📄 コード構成 (Project Structure)
 
--   GET /notes
--   POST /notes
--   GET /notes/{id}
--   PUT /notes/{id}
--   DELETE /notes/{id}
+```
+fastapi-notes/
+├─ app/
+│   ├─ main.py
+│   ├─ schemas.py
+│   └─ routers/
+│       └─ notes.py
+├─ requirements.txt
+├─ README.md
+└─ .gitignore
+```
 
-## 🎯 Purpose
+## ⚠️ 注意点 / 補足 (Caveats & Notes)
 
-This project was created to demonstrate basic backend API development skills using FastAPI.
-
-## 📬 Contact
-
-ishida-gh-dev
+-   現状、データはメモリ上で保持。サーバ再起動で消える仕様。
+-   デプロイ設定・DB 永続化・認証機能などは未実装。
