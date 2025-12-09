@@ -42,11 +42,8 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
--   ブラウザで以下へアクセス → Swagger UI が立ち上がる
-    -   http://localhost:8000/docs
-    -   画面イメージ
-<img width="1854" height="2377" alt="image" src="https://github.com/user-attachments/assets/ac33303a-a6c1-4c77-ad45-d56318def1de" />
-
+-   ブラウザで以下へアクセス → Swagger UI が立ち上がる - http://localhost:8000/docs - 画面イメージ
+    <img width="1854" height="2377" alt="image" src="https://github.com/user-attachments/assets/ac33303a-a6c1-4c77-ad45-d56318def1de" />
 
 ## 📄 コード構成 (Project Structure)
 
@@ -66,4 +63,3 @@ fastapi-notes/
 
 -   現状、データはメモリ上で保持。サーバ再起動で消える仕様。
 -   デプロイ設定・DB 永続化・認証機能などは未実装。
-
