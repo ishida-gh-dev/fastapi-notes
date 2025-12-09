@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDE / エディタ関連
+.vscode/
+.idea/
+
+# OS 関連
+.DS_Store
+Thumbs.db
+
+# ローカルDB / データファイル
+*.db
+*.sqlite
